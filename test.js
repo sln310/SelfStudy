@@ -20,3 +20,4 @@ while (left <= right) {
 }
 
 console.log(a[index]);
+console.log("aidjud9jijvf");
