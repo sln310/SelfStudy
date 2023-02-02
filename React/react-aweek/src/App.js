@@ -1,25 +1,25 @@
 import React from "react";
 import { List } from "./List";
+import { Form } from "./Form";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { description: "display before click" };
-  }
-
-  changeDescription() {
-    this.setState({
-      description: "display after click",
-    });
+    this.state = { tab: "list" };
   }
 
   render() {
-    const { description } = this.state;
+    const { tab } = this.state;
     return (
       <div>
-        {description}
-        <List title="Language List" />
-        <button onClick={() => this.changeDescription()}>button</button>
+        <header>
+          <ul>
+            <li onClick={() => this.setState({ tab: "list" })}>List</li>
+            <li onClick={() => this.setState({ tab: "form" })}>Form</li>
+          </ul>
+        </header>
+        <hr />
+        {tab === "list" ? <List /> : <Form />}
       </div>
     );
   }
