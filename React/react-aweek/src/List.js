@@ -1,8 +1,11 @@
-export const List = ({ title }) => {
+const LANGUAGES = ["JavaScript", "C++", "Rudy", "Java", "PHP", "Go"];
+
+export const List = () => {
   return (
     <div>
-      <h4>{title}</h4>
-      <div>This is List</div>
+      {LANGUAGES.map((lang, index) => {
+        return <div key={index}>{lang}</div>;
+      })}
     </div>
   );
 };
