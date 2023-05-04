@@ -1,13 +1,17 @@
 import { useState } from "react";
+import Button from "./Button";
 
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <hader className="text-gray-700 border-b border-gray-200">
+    <div className="dark:bg-gray-700">
+      <hader className="text-gray-700 border-b border-gray-200 dark:text-white">
         <div className="container flex mx-auto p-5 flex-col md:flex-row items-center">
-          <a href="#" className="font-medium text-gray-900 mb-4 md:mb-0">
+          <a
+            href="#"
+            className="font-medium text-gray-900 mb-4 md:mb-0 dark:text-white"
+          >
             <span className="text-xl ml-3">Hanako Sato</span>
           </a>
           <nav className="md:ml-auto text-base">
@@ -20,14 +24,17 @@ function App() {
             <a href="#Skills" className="mr-5 hover:text-blue-400 duration-300">
               Skills
             </a>
-            <a href="#Blog" className="hover:text-blue-400 duration-300">
+            <a href="#Blog" className="mr-5 hover:text-blue-400 duration-300">
               Blog
+            </a>
+            <a>
+              <Button />
             </a>
           </nav>
         </div>
       </hader>
 
-      <section className="text-gray-700" id="home">
+      <section className="text-gray-700 dark:text-white" id="home">
         <div className="flex container mx-auto py-20 px-5 flex-col md:flex-row items-center">
           <div className="md:w-1/2 flex-grow mb-16 lg:pr-24 md:pr-16 text-center md:text-left">
             <h1 className="text-3xl sm:text-6xl text-gray-900 font-medium mb-4">
@@ -320,7 +327,7 @@ function App() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
