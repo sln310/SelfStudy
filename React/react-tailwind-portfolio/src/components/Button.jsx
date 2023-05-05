@@ -23,14 +23,12 @@ function Button() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    // <div className="h-screen bg-white dark:bg-black flex justify-center items-center">
     <button
-      className="bg-green-200 p-1 rounded-3xl"
+      className="bg-gray-700  w-7 h-7 rounded-full"
       onClick={handleThemeSwitch}
     >
-      Dark
+      🌙
     </button>
-    // </div>
   );
 }
 
