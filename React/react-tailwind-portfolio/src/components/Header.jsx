@@ -22,7 +22,7 @@ function Header() {
             Skills
           </a>
           <a href="#Blog" className="mr-5 hover:text-blue-400 duration-300">
-            Blog
+            Contact
           </a>
           <a>
             <Button />
